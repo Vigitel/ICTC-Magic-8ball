@@ -1,0 +1,9 @@
+altgraph==0.17.4
+flash==1.0.3
+flaskwebgui==1.1.6
+packaging==24.2
+pefile==2023.2.7
+psutil==6.1.1
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2025.1
+pywin32-ctypes==0.2.3
