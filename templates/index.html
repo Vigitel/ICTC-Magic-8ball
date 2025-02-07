@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Magic 8-Ball</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Bonsoir Besties, this do be your local server speaking</h1>
+    <div class="container" style="width: 200px;margin: 0 auto">
+        <h1>Magic 8-Ball</h1>
+        <input type="text" id="question" placeholder="Ask a yes/no question">
+        <button onclick="getAnswer()">Ask</button>
+        <p id="response"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
