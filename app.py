@@ -16,7 +16,7 @@ def home():
 @app.route('/get-answer', methods=['POST'])  # Change to POST
 def get_answer():
     data = request.get_json()  # Get JSON data from request
-    question = data.get('question')  # Extract question
+    question = data.get('question','')  # Extract question
 
     print(f"User asked: {question}")  # Log for debugging
 

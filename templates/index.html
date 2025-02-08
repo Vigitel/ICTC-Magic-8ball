@@ -7,12 +7,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container" style="width: 200px;margin: 0 auto">
-        <h1>Magic 8-Ball</h1>
-        <input type="text" id="question" placeholder="Ask a yes/no question">
-        <button onclick="getAnswer()">Ask</button>
-        <p id="response"></p>
+    <h1>Magic 8-Ball</h1>
+    
+    <div class = "eight_ball_image" style="width: 200px;margin: 0 auto">
+
+        <img src="{{ url_for('static', filename='8-ball.png') }}" alt="8-ball" />
+  
+        <div class="centered"> <p id="response"></p> </div>
+  
     </div>
+
+
+
+    <div class="container" style="width: 200px;margin: 0 auto">
+        
+        
+        <div class = "input-container" style="width: 200;margin: 0 auto">
+            <input type="text" id="question" placeholder="Ask a yes/no question">
+            <button onclick="getAnswer()">Ask</button>
+            
+        </div>
+
+    </div>
+    
+        
+    
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
