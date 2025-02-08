@@ -1,3 +1,41 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+/*
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -8,23 +46,17 @@ body {
 
 
 .eight_ball_image {
-    position: relative; /* Ensures child elements like response are positioned relative to this */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .centered {
-    position: absolute; /* Absolute position inside eight_ball_image */
-    top: 50%; /* Move it down to the middle */
-    left: 50%; /* Center it horizontally */
-    transform: translate(-50%, -50%); /* Perfectly centers it */
-    color: white; /* Make text readable */
-    font-weight: bold;
-    font-size: 20px; /* Adjust size */
-    text-shadow: 2px 2px 4px black; /* Add shadow for better visibility */
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 
 
@@ -82,3 +114,4 @@ button:hover {
     background-color: #005f73;
 }
 
+*/
