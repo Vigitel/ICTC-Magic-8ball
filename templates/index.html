@@ -18,10 +18,10 @@
             /*background-color: #cb57b4;*/
             color: white;
             padding: 50px;
-            overflow: visible;
+            overflow: hidden;
         }
 
-        .ICTC_logo {
+        .ICTC_header {
             position: relative;
             image-rendering: pixelated;
             zoom: 3.4;
@@ -53,7 +53,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -70%);
-            zoom: 0.075;
+            zoom: 0.08;
             max-width: 125px;
         }
 
@@ -103,13 +103,33 @@
             background-color: #001173;
         }
 
+        .ICTC_logo_motto {
+            flex-direction: row;
+            transform: translate(0%, -20%);
+            max-width: 400px;
+            gap: 20px;
+            display: flex;
+            padding: 7.5px;
+            background-color: rgba(0,0,0,0.5);
+        }
 
+        .ictc_logo {
+            height: 80px;
+            max-width: 80vw;
+        }
+
+        .ictc_motto {
+            max-width: 300px;
+            text-align: left;
+            letter-spacing: 2.5px;
+            
+        }
 
     </style>
 </head>
 <body>
     
-    <img class = "ICTC_logo" src="{{ url_for('static', filename='ICTC_8ball_logo.png') }}" alt="8-ball">
+    <img class = "ICTC_header" src="{{ url_for('static', filename='ICTC_8ball_logo.png') }}" alt="8-ball">
     
     <div class="eight_ball_image">
 
@@ -133,6 +153,11 @@
             
         </div>
 
+    </div>
+
+    <div class = "ICTC_logo_motto">
+        <img class="ictc_logo" src = "{{ url_for('static', filename='Logo_5.png') }}", alt="ictc_logo">
+        <p class = "ictc_motto">Through Tech We Connect</p>
     </div>
     
         

@@ -1,12 +1,14 @@
 from flask import Flask, render_template, jsonify, request
-import random
+import random, time
+import flaskwebgui
 
 app = Flask(__name__)
+gui = flaskwebgui.FlaskUI(app)
 
 responses = [
-    "Yes, definitely!", "No, absolutely not.", "Ask again later.", 
-    "Most likely.", "Very doubtful.", "It is certain.", 
-    "Better not tell you now.", "Concentrate and ask again."
+    "Yes for sure!", "It is clear", "No doubt!", "All signs say yes", 
+    "Ask again", "Try once more", "Look deep within you", 
+    "No way to say", "Not at all", "Do not bet on it", "The stars say no"
 ]
 
 @app.route('/')
@@ -19,6 +21,7 @@ def get_answer():
     question = data.get('question','')  # Extract question
 
     print(f"User asked: {question}")  # Log for debugging
+    
 
     response = random.choice(responses)  # Pick a random answer
     return jsonify({"question": question, "answer": response})  # Return both
@@ -31,3 +34,4 @@ def get_answer():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    #gui.run()
