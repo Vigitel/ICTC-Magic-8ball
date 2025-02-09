@@ -15,6 +15,7 @@
             font-family: myFont;
             text-align: center;
             background-image: url("static/background.png");
+            /*background-color: #cb57b4;*/
             color: white;
             padding: 50px;
             overflow: visible;
@@ -56,61 +57,52 @@
             max-width: 125px;
         }
 
-
-
-        .container {
-            max-width: 400px;
-            margin-top: 1px;
-            padding: 15px;
-            background: #444;
-            border-radius: 7px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            right:50%;
-        }
-
+      
 
         .input-container {
             max-width: 400px;
             margin: auto;
-            padding: 20px;
-            background: #444;
-            border-radius: 10px;
+            transform: translate(15%, 0%);
             text-align: center;
             display: flex;
-            flex-direction: column;
-            align-items: center; 
-            right: 50%;
+            flex-direction: row; /* Align elements horizontally */
+            align-items: center;
+            /* Add spacing between input and button */
         }
 
-
         input {
-            width: 90%;
-            max-width: 250px;
+            width: 200%; /* Adjust width */
+            max-width: 200px;
             padding: 10px;
             text-align: center;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            right: 50%;
+            
+            font-family: myFont;
+            font-size: xx-small;
+
+            outline: black solid 2.5px;
         }
 
         button {
-            width: 90%;
-            max-width: 250px;
-            padding: 10px;
-            background-color: #008CBA;
+            width: 35%; /* Adjust width */
+            max-width: 50px;
+            padding: 7.7px;
+            background-color: #0054ba;
             color: white;
             border: none;
-            border-radius: 5px;
+            
             cursor: pointer;
-            right: 50%;
+
+            font-family: myFont;
+
+            outline: black solid 2.5px;
+        
         }
 
         button:hover {
-            background-color: #005f73;
+            background-color: #001173;
         }
+
 
 
     </style>
@@ -132,12 +124,12 @@
     
 
     
-    <div class="container" style="width: 200px;margin: 0 auto">
+    <div class="container" style="width: 400px;margin: 0 auto">
         
         
         <div class = "input-container" style="width: 200;margin: 0 auto">
             <input type="text" id="question" placeholder="Ask a yes/no question">
-            <button onclick="getAnswer()">Ask</button>
+            <button onclick="getAnswer()">></button>
             
         </div>
 
