@@ -4,38 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic 8-Ball</title>
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">-->
+    <link rel = "icon" type = "image/png" href = "static/8-ball-icon.png"/>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
     <style>
+        @font-face {
+            font-family: myFont;
+            src: url('static/Daydream.ttf');
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: myFont;
             text-align: center;
-            background-color: #222;
+            background-image: url("static/background.png");
             color: white;
             padding: 50px;
+            overflow: visible;
         }
 
+        .ICTC_logo {
+            position: relative;
+            image-rendering: pixelated;
+            zoom: 3.4;
+
+        }
 
         .eight_ball_image {
             position: relative;
             text-align: center;
             color: white;
+            image-rendering: pixelated;
+            resize: both;
+            zoom: 7;
+        }
+
+        .eight_ball_circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50.05%, -58.5%);
+            image-rendering: pixelated;
+            zoom: 1.2;
         }
 
         .centered {
             position: absolute;
+            text-align: center;
+            text-align-last: center;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -70%);
+            zoom: 0.075;
+            max-width: 125px;
         }
 
 
 
         .container {
             max-width: 400px;
-            margin: auto;
-            padding: 20px;
+            margin-top: 1px;
+            padding: 15px;
             background: #444;
-            border-radius: 10px;
+            border-radius: 7px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -89,13 +117,16 @@
 </head>
 <body>
     
-    <h1>Magic 8-Ball</h1>
+    <img class = "ICTC_logo" src="{{ url_for('static', filename='ICTC_8ball_logo.png') }}" alt="8-ball">
     
     <div class="eight_ball_image">
 
-        <img src="{{ url_for('static', filename='8-ball.png') }}" alt="8-ball"">
+        <img src="{{ url_for('static', filename='8-ball-icon.png') }}" alt="8-ball">
+        <div>
+            <img class = "eight_ball_circle" src="{{ url_for('static', filename='8-ball-text-circle.png') }}" alt="8-ball-circle">
 
-        <div class="centered" id="response">Center</div> 
+            <div class="centered" id="response"></div> 
+        </div>
         
     </div>
     
