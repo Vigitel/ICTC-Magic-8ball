@@ -7,9 +7,9 @@ ui = FlaskUI(app=app, server="flask")
 test_env = True
 
 responses = [
-    "Yes for sure!", "It is clear", "No doubt!", "All signs say yes", 
-    "Ask again", "Try once more", "Look deep within you", 
-    "No way to say", "Not at all", "Do not bet on it", "The stars say no"
+    "Yes for sure!", "It is clear", "No doubt!", "All signs say yes", "Yes! Absolutely!", "Push mo iyan teh!",
+    "Ask again", "Try once more", "Look deep within you", "Maybe", "Secret, tanungin mo sya", 
+    "No way to say", "Not at all", "Do not bet on it", "The stars say no", "Huwag ka na umasa"
 ]
 
 @app.route('/')
@@ -47,3 +47,5 @@ if __name__ == '__main__':
     #gui.run()
 
 '''
+
+#pyinstaller --name="ICTC Magic 8-ball" --onefile --paths=env\Lib\site-packages --add-data="static;static" --add-data="templates;templates" app.py --no-console

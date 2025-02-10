@@ -144,16 +144,22 @@
         
     </div>
     
-
+    <!--<div class = "input-container" style="width: 200;margin: 0 auto">
+        <input type="text" id="question" placeholder="Ask a yes/no question">
+        <button onclick="getAnswer()">></button>
+        
+    </div>-->
     
-    <div class="container" style="width: 400px;margin: 0 auto">
+    <div class="container" style="width: 400px; margin: 0 auto">
         
-        
-        <div class = "input-container" style="width: 200;margin: 0 auto">
-            <input type="text" id="question" placeholder="Ask a yes/no question">
-            <button onclick="getAnswer()">></button>
-            
-        </div>
+         
+        <form onsubmit="event.preventDefault(); getAnswer();">
+            <div class="input-container">
+                <input type="text" id="question" placeholder="Ask a yes/no question">
+                <button type="submit">></button>
+            </div>
+        </form>
+
 
     </div>
 
